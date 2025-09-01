@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Landing | Servicio Profesional</title>
+    <meta name="description" content="Landing page simple y moderna con HTML y CSS puros." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo" aria-label="Ir al inicio">MiLanding</a>
+
+        <!-- Toggle móvil sin JS -->
+        <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Abrir menú" />
+        <label for="nav-toggle" class="nav__burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
+
+        <nav class="nav" aria-label="principal">
+          <a href="#servicios">Servicios</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#precios">Precios</a>
+          <a href="#contacto" class="btn btn--sm">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Impulsa tu proyecto con una web rápida y elegante</h1>
+        <p class="hero__subtitle">
+          Diseño responsivo, buenas prácticas de accesibilidad y rendimiento sin complicaciones.
+        </p>
+        <div class="hero__actions">
+          <a href="#precios" class="btn">Comenzar</a>
+          <a href="#servicios" class="btn btn--ghost">Ver más</a>
+        </div>
+
+        <ul class="hero__stats" aria-label="estadísticas clave">
+          <li><strong>+99</strong><span>Proyectos</span></li>
+          <li><strong>100%</strong><span>Responsivo</span></li>
+          <li><strong>SEO</strong><span>Optimizado</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2 class="section__title">Servicios</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Diseño Web</h3>
+            <p>Interfaces limpias y modernas enfocadas en claridad y conversión.</p>
+          </article>
+          <article class="card">
+            <h3>Performance</h3>
+            <p>Buenas métricas Core Web Vitals para una experiencia veloz.</p>
+          </article>
+          <article class="card">
+            <h3>Accesibilidad</h3>
+            <p>Buenas prácticas ARIA y contraste para todos los usuarios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Beneficios</h2>
+        <div class="grid features">
+          <div class="feature">
+            <span class="feature__badge">1</span>
+            <h4>Código claro</h4>
+            <p>HTML semántico y CSS escalable para crecer sin caos.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__badge">2</span>
+            <h4>Sin dependencias</h4>
+            <p>Solo HTML y CSS: menos peso, menos problemas.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__badge">3</span>
+            <h4>Responsive primero</h4>
+            <p>Se ve bien en móviles, tablets y desktops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Precios -->
+    <section id="precios" class="section">
+      <div class="container">
+        <h2 class="section__title">Precios</h2>
+        <div class="grid plans">
+          <article class="plan">
+            <h3>Básico</h3>
+            <p class="plan__price">$99</p>
+            <ul class="plan__list">
+              <li>1 página</li>
+              <li>Soporte por email</li>
+              <li>Entrega en 48h</li>
+            </ul>
+            <a href="#contacto" class="btn btn--block">Elegir</a>
+          </article>
+          <article class="plan plan--pro">
+            <h3>Pro</h3>
+            <p class="plan__price">$199</p>
+            <ul class="plan__list">
+              <li>Hasta 5 páginas</li>
+              <li>Optimización SEO</li>
+              <li>Soporte prioritario</li>
+            </ul>
+            <a href="#contacto" class="btn btn--block">Elegir</a>
+          </article>
+          <article class="plan">
+            <h3>Empresarial</h3>
+            <p class="plan__price">$399</p>
+            <ul class="plan__list">
+              <li>Proyecto a medida</li>
+              <li>Integraciones</li>
+              <li>Consultoría incluida</li>
+            </ul>
+            <a href="#contacto" class="btn btn--block">Elegir</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <form class="form" aria-label="Formulario de contacto">
+          <div class="form__row">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form__row">
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" placeholder="tunombre@email.com" required />
+          </div>
+          <div class="form__row">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Cómo puedo ayudarte?" required></textarea>
+          </div>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> MiLanding. Todos los derechos reservados.</p>
+        <a href="#" class="footer__link">Términos</a>
+        <a href="#" class="footer__link">Privacidad</a>
+      </div>
+    </footer>
+
+    <script>
+      // Año dinámico sin dependencias
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
